@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #030712;
+  font-family: "Open Sans";
+}
+
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d4d4d8;
+  text-decoration: none;
+  height: 100%;
+  margin-right: 0.75em;
+}
+
+header a:nth-child(1) {
+  margin: 0;
+  margin-right: 0.2em;
+}
+
+header a:hover {
+  color: white;
+}
+
+.gray-line {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #18181b;
+  width: 100%;
+}
+
+header {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #111827;
+}
+
+header img {
+  height: auto;
+  margin-left: 0.75em;
+  height: 65px;
+}
