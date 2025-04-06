@@ -3,6 +3,11 @@
   src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("/fonts/Open_Sans/static/OpenSans-Bold.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,12 +27,13 @@ header a {
   text-decoration: none;
   height: 100%;
   margin-right: 0.75em;
+  font-family: "Open Sans Bold";
 }
 
-header a:nth-child(1) {
+/* header a:nth-child(1) {
   margin: 0;
   margin-right: 0.2em;
-}
+} */
 
 header a:hover {
   color: white;
@@ -52,4 +58,5 @@ header img {
   height: auto;
   margin-left: 0.75em;
   height: 65px;
+  border-radius: 8px;
 }
