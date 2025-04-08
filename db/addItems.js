@@ -25,19 +25,19 @@ const items = [
     rarity: "Cover",
     quality: "Field-Tested",
     imgURL: "/assets/logo.png"
-  },
+  }
 ]
 
 const SQL = `
-CREATE TABLE IF NOT EXIST items {
+CREATE TABLE IF NOT EXISTS items (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   category TEXT,
   rarity TEXT,
   quality TEXT,
   imgURL TEXT
-};
+);
 
-INSERT INTO items (category, rarity, quality)
+INSERT INTO items (category, rarity, quality, imgURL)
 VALUES
   ('${items[0].category}', '${items[0].rarity}', '${items[0].quality}', '${items[0].imgURL}'),
   ('${items[1].category}', '${items[1].rarity}', '${items[1].quality}', '${items[1].imgURL}'),
