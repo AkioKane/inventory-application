@@ -4,25 +4,25 @@ require('dotenv').config();
 const items = [
   {
     category: "Rifle",
-    rarity: "Cover",
+    rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/logo.png"
   },
   {
     category: "Rifle",
-    rarity: "Cover",
+    rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/logo.png"
   },
   {
     category: "Rifle",
-    rarity: "Cover",
+    rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/logo.png"
   },
   {
     category: "Rifle",
-    rarity: "Cover",
+    rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/logo.png"
   }
