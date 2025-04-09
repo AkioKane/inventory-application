@@ -140,7 +140,8 @@ header img {
   user-select: none;
   gap: 0.5em;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  transition: all 0.1s ease-in-out;
 }
 
 .content aside .parameters .section-link span {
@@ -149,13 +150,13 @@ header img {
 }
 
 .content aside .parameters .rarity-section .section-link svg {
-  height: 18px;
+  height: 22px;
   border-radius: 4px;
   border: 1px solid var(--border-color);
 }
 
 .content aside .parameters .quality-section .section-link svg {
-  height: 18px;
+  height: 22px;
 }
 
 .content aside .parameters span {
@@ -217,4 +218,56 @@ header img {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fn-svg {
+  color: #525252;
+}
+
+.fn-a:hover {
+  .fn-svg {
+    color: #737373;
+  }
+}
+
+.mw-svg {
+  color: #a16207;
+}
+
+.mw-a:hover {
+  .mw-svg {
+    color: #ca8a04;
+  }
+}
+
+.ft-svg {
+  color: #d97706;
+}
+
+.ft-a:hover {
+  .ft-svg {
+    color: #f59e0b;
+  }
+}
+
+.ww-svg {
+  color: #ea580c;
+}
+
+.ww-a:hover {
+  .ww-svg {
+    color: #f97316;
+  }
+}
+
+.bs-svg {
+  color: #dc2626;
+}
+
+.bs-a:hover {
+  .bs-svg {
+    color: #ef4444;
+  }
 }
