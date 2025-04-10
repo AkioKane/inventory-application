@@ -43,7 +43,7 @@ VALUES
   ('${items[1].category}', '${items[1].rarity}', '${items[1].quality}', '${items[1].imgURL}'),
   ('${items[2].category}', '${items[2].rarity}', '${items[2].quality}', '${items[2].imgURL}'),
   ('${items[3].category}', '${items[3].rarity}', '${items[3].quality}', '${items[3].imgURL}');
-`
+`;
 
 async function main() {
   console.log("seeding...");
