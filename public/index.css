@@ -345,6 +345,8 @@ body {
 }
 
 .items .item {
+  display: flex;
+  justify-content: center;
   height: 180px;
   width: 170px;
   border-radius: 8px;
@@ -353,10 +355,15 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.items .item img {
+  height: 100px;
+  margin-top: 1em;
+}
+
 .covert {
   background: linear-gradient(0deg, rgba(76,5,25,1) 7%, rgba(13,21,33,1) 74%);
 }
 
 .covert:hover {
-  background: linear-gradient(0deg, rgba(136,19,55,0.5) 7%, rgba(13,21,33,1) 74%);
+  background: linear-gradient(0deg, rgba(136,19,55,0.6) 7%, rgba(13,21,33,1) 74%);
 }

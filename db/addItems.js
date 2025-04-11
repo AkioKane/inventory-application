@@ -6,25 +6,25 @@ const items = [
     category: "Rifle",
     rarity: "Covert",
     quality: "Field-Tested",
-    imgURL: "/assets/logo.png"
+    imgURL: "/assets/ak47_headshot.png"
   },
   {
     category: "Rifle",
     rarity: "Covert",
     quality: "Field-Tested",
-    imgURL: "/assets/logo.png"
+    imgURL: "/assets/ak47_headshot.png"
   },
   {
     category: "Rifle",
     rarity: "Covert",
     quality: "Field-Tested",
-    imgURL: "/assets/logo.png"
+    imgURL: "/assets/ak47_headshot.png"
   },
   {
     category: "Rifle",
     rarity: "Covert",
     quality: "Field-Tested",
-    imgURL: "/assets/logo.png"
+    imgURL: "/assets/ak47_headshot.png"
   }
 ]
 
@@ -48,7 +48,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: "process.env.DATABASE_URL",
   });
   await client.connect();
   await client.query(SQL);
