@@ -127,6 +127,16 @@
           <a class="category-link" href="?category=stickers">Stickers</a>
           <a class="category-link" href="?category=other">Other</a>
         </header>
+        <!-- <div class="search-panel">
+          <input type="text" class="search-input" placeholder="Quick Search">
+        </div> -->
+        <div class="items">
+          <% for (item of items)  { %>
+            <div class="item <%=item.rarity.charAt(0).toLowerCase() + item.rarity.slice(1)%>">
+
+            </div>
+          <% } %>
+        </div>
       </div>
     </div>
   </div>
