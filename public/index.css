@@ -345,8 +345,6 @@ body {
 }
 
 .items .item {
-  display: flex;
-  justify-content: center;
   height: 180px;
   width: 170px;
   border-radius: 8px;
@@ -356,8 +354,16 @@ body {
 }
 
 .items .item img {
-  height: 100px;
+  align-items: center;
+  height: 95px;
   margin-top: 1em;
+  transition: all 0.1s ease-in-out;
+}
+
+.items .item .img-container-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .covert {
@@ -365,5 +371,29 @@ body {
 }
 
 .covert:hover {
+  img {
+    transform: scale(1.1);
+  };
   background: linear-gradient(0deg, rgba(136,19,55,0.6) 7%, rgba(13,21,33,1) 74%);
+}
+
+.items .item .info-container-item {
+  margin: 0.5em;
+  margin-top: 0;
+}
+
+.items .item .info-container-item h4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+#steam-cheap {
+  height: 24px;
+  width: 24px;
+}
+
+.items .item .info-container-item p {
+  font-size: 0.7rem;
+  color: #adaeaf;
+  margin-top: 0.25em;
 }
