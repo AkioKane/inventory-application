@@ -4,6 +4,7 @@ const path = require("path");
 const app = express();
 
 const indexRouter = require("./routes/indexRouter");
+const { error } = require("console");
 
 const assetsPathPublic = path.join(__dirname, "public");
 const assetsPathAssets = path.join(__dirname, "assets");
@@ -19,6 +20,13 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use("/", indexRouter);
+
+app.use((req, res, next) => {
+  res.status(404).render("404", {
+    title: "Page not found!", 
+    text: "Try returning to the home page..."
+  });
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {

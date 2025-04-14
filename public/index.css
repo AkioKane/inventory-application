@@ -29,7 +29,7 @@ body {
   --header-height: 60px;
   --content-height: calc(100vh - var(--header-height));
   --border-color: #374151;
-  --filter-height: 50px;
+  --filter-height: 70px;
   --aside-width: 300px;
   --text-color: #d4d4d8;
 }
@@ -111,7 +111,7 @@ body {
 }
 
 .content aside .parameters {
-  height: calc(100% - 50px);
+  height: calc(100% - var(--filter-height));
 }
 
 .content aside .parameters .rarity-section {
@@ -286,6 +286,7 @@ body {
   display: flex;
   height: var(--filter-height);
   width: 100%;
+  overflow-x: auto;
 }
 
 .container-main .category-header a {
@@ -341,20 +342,25 @@ body {
   flex-wrap: wrap;
   gap: 1em;
   margin: 2em;
-  height: calc(100% - var(--filter-height) - 4em);
 }
 
 .items .item {
-  height: 180px;
+  position: relative;
+  max-height: 180px;
   width: 170px;
+  max-width: 250px;
   border-radius: 8px;
   background-color: #374151;
   border: 1px solid #27272a;
+  overflow: hidden;
   transition: all 0.5s ease-in-out;
+  flex: 1 1 170px;
+  padding-bottom: 0.85em;
 }
 
 .items .item img {
   align-items: center;
+  object-fit: cover;
   height: 95px;
   margin-top: 1em;
   transition: all 0.1s ease-in-out;
@@ -364,6 +370,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 0;
 }
 
 .covert {
@@ -375,6 +382,13 @@ body {
     transform: scale(1.1);
   };
   background: linear-gradient(0deg, rgba(136,19,55,0.6) 7%, rgba(13,21,33,1) 74%);
+}
+
+.item:hover {
+  .buy-item-container {
+    opacity: 1;
+    height: 30px;
+  }
 }
 
 .items .item .info-container-item {
@@ -396,4 +410,23 @@ body {
   font-size: 0.7rem;
   color: #adaeaf;
   margin-top: 0.25em;
+}
+
+.buy-item-container {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 0px;
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+}
+
+.buy-item {
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: #0284c7;
+  font-weight: 600;
+  cursor: pointer;
 }
