@@ -313,30 +313,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* .search-panel {
-  display: flex;
-  width: 100%;
-}
-
-.search-panel .search-input {
-  height: 36px;
-  width: 35%;
-  margin-left: 2em;
-  padding-left: 1em;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #000000,#0d1521,#070e18);
-  color: white;
-  border: 1px solid var(--border-color);
-}
-
-.search-panel .search-input:hover {
-  border: 1px solid #4e4e56;
-}
-
-.search-panel .search-input:focus {
-  outline: none;
-} */
-
 .items {
   display: flex;
   flex-wrap: wrap;
