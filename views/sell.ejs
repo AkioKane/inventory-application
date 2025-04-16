@@ -4,10 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/public/sell.css">
+  <link rel="stylesheet" href="/public/index.css">
   <link class="favicon" rel="icon" href="/assets/logo.png" type="image/png">
+  <script src="/DOM/sell.js" defer></script>
   <title><%=title %></title>
 </head>
 <body>
   
+  <div class="main">
+    <header class="home-header">
+      <a href="/"><img src="/assets/logo.png" alt="logo"></a>
+      <a href="/">Buy</a>
+      <a href="/sell">Sell</a>
+      <!-- <div class="gray-line"></div> -->
+    </header>
+
+    <div class="add-item">
+      <h1>Sell Item</h1>
+      <form method="post" action="/sell">
+        <label for="name">Name*:</label>
+        <input type="text" id="name" placeholder="Head-Shot" required>
+
+        <label for="name">Gun*:</label>
+        <select name="gun" id="gun" required>
+          <option value="" disabled selected>Select Gun</option>
+          <option value="ak-47">Ak-47</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
