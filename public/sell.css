@@ -59,8 +59,12 @@
   height: 42px;
   width: 100%;
   padding-left: 8px;
-  margin-bottom: 1em;
   transition: all 0.1s ease-in-out;
+}
+
+.add-item form input,
+.add-item form select {
+  margin-bottom: 1em;
 }
 
 .add-item form input:focus {
@@ -68,7 +72,7 @@
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
-.add-item form #gun {
+.add-item form .selection {
   display: flex;
   justify-content: end;
   width: 50%;
@@ -82,7 +86,29 @@
   padding-right: 5px;
 }
 
-.add-item form #gun:focus {
+.add-item form .selection:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=file] {
+  padding-top: 8px;
+}
+
+.add-item form button {
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 1em;
+  transition: all 0.1s ease-in-out;
+}
+
+.add-item form button:active {
+  box-shadow: 0 0 0 5px #52525b;
 }

@@ -14,6 +14,15 @@ async function indexRouterGet(req, res, next) {
   }
 }
 
+async function sellRouterPost(req, res, next) {
+  try {
+    res.redirect("/")
+  } catch (err) {
+    next(err)
+  }
+}
+
 module.exports = {
-  indexRouterGet
+  indexRouterGet,
+  sellRouterPost
 }

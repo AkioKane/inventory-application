@@ -23,13 +23,39 @@
       <h1>Sell Item</h1>
       <form method="post" action="/sell">
         <label for="name">Name*:</label>
-        <input type="text" id="name" placeholder="Head-Shot" required>
+        <input name="name" type="text" id="name" placeholder="Head-Shot" required>
 
-        <label for="name">Gun*:</label>
-        <select name="gun" id="gun" required>
+        <label for="gun">Gun*:</label>
+        <select name="gun" id="gun" class="selection" required>
           <option value="" disabled selected>Select Gun</option>
-          <option value="ak-47">Ak-47</option>
+          <option value="Ak-47">Ak-47</option>
         </select>
+
+        <label for="cost">Cost*:</label>
+        <input type="number" name="cost" id="cost" placeholder="1560" required>
+
+        <label for="category">Category*:</label>
+        <select name="category" id="category" class="selection" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="Rifle">Rifle</option>
+        </select>
+
+        <label for="rarity">Rarity*:</label>
+        <select name="rarity" id="rarity" class="selection" required>
+          <option value="" disabled selected>Select Rarity</option>
+          <option value="Covert">Covert</option>
+        </select>
+
+        <label for="quality">Quality*:</label>
+        <select name="quality" id="quality" class="selection" required>
+          <option value="" disabled selected>Select Quality</option>
+          <option value="Factory-New">Factory New</option>
+        </select>
+
+        <label for="imgURL">Cost*:</label>
+        <input type="file" id="imgURL" name="imgURL" required accept="image/*">
+        
+        <button type="submit">Sumbit</button>
       </form>
     </div>
   </div>
