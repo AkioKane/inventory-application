@@ -16,9 +16,14 @@ async function indexRouterGet(req, res, next) {
 
 async function sellRouterPost(req, res, next) {
   try {
+    const { name, gun, cost, category, rarity, quality } = req.body;
+    const imgURL = `public/uploads/${req.file.filename}`;
+
+    await db.insertItem(name, gun, cost, category, rarity, quality, imgURL)
+
     res.redirect("/")
   } catch (err) {
-    next(err)
+    next(err);
   }
 }
 
