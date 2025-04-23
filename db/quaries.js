@@ -21,6 +21,37 @@ async function insertItem(
   );
 }
 
+async function searchItem({
+  name=null,
+  category=null,
+  rarity=null,
+  quality=null
+}) {
+  let query = 'SELECT * FROM items';
+  let value;
+  let condition;
+
+  if (name) {
+    condition = 'name ILIKE $1';
+    value = name;
+  } else if (category) {
+    condition = 'category ILIKE $1';
+    value = category;
+  } else if (rarity) {
+    condition = 'rarity ILIKE $1';
+    value = rarity;
+  } else if (quality) {
+    condition = 'quality ILIKE $1';
+    value = quality;
+  } else {
+    return [];
+  }
+
+  query += ` WHERE ${condition}`;
+  const result = await pool.query(query, [value]);
+  return result.rows;
+}
+
 async function deleteItem(
   name,
   gun,
@@ -45,5 +76,6 @@ async function deleteItem(
 module.exports = {
   getAllItems,
   insertItem,
-  deleteItem
+  deleteItem,
+  searchItem
 };

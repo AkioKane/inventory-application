@@ -2,13 +2,32 @@ const db = require("../db/quaries");
 
 async function getItems(req, res) {
   const items = await db.getAllItems();
+  // console.log("Items: ", items);
   return items;
 }
 
 async function indexRouterGet(req, res, next) {
   try {
     const arr = await getItems();
-    res.render("index", {title: "Home", items: arr});
+    console.log(req.query);
+
+    if (Object.keys(req.query).length > 0) {
+      let search;
+      if (req.query.quality) {
+        search = await db.searchItem({ quality: req.query.quality });
+      } else if (req.query.category) {
+        search = await db.searchItem({ category: req.query.category });
+      } else if (req.query.rarity) {
+        search = await db.searchItem({ rarity: req.query.rarity });
+      } else if (req.query.name) {
+        search = await db.searchItem(req.query.name);
+      }
+
+      console.log("Search: ", search);
+      await res.render("index", {title: "Home", items: search});
+    } else {
+      await res.render("index", {title: "Home", items: arr});
+    }
   } catch (err) {
     next(err);
   }
