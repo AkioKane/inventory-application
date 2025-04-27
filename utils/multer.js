@@ -17,7 +17,24 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+function deleteFile(filePath) {
+  if (fs.existsSync(filePath)) {
+    fs.unlink(filePath, (err) => {
+      if (err) {
+        console.error("Error with delete files: ", err);  // Печать конкретной ошибки
+      } else {
+        console.log("File deleted successfully!");
+      }
+    });
+  } else {
+    console.log("File does not exist!");
+  }
+}
+
 module.exports = {
   storage,
-  upload
+  upload,
+  deleteFile
 }
+
+// deleteFile("public/uploads/1745772882374_logo.png");

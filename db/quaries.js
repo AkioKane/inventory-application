@@ -1,4 +1,6 @@
+const { deleteFile } = require("../utils/multer");
 const pool = require("./pool");
+const path = require("path");
 
 async function getAllItems() {
   const { rows } = await pool.query("SELECT * FROM items");
@@ -53,7 +55,15 @@ async function searchItem({
 }
 
 async function deleteItem(id) {
-  await pool.query(`
+  const imgURL = await pool.query(`
+      SELECT imgURL FROM items
+      WHERE id=$1;
+    `, [id]
+  );
+
+  deleteFile(imgURL.rows[0].imgurl);
+
+  return await pool.query(`
       DELETE FROM items 
       WHERE id=$1;
     `, [id]

@@ -7,7 +7,7 @@ const items = [
     name: "Head-Shot",
     gun: "AK-47",
     cost: "641",
-    category: "Rifle",
+    category: "Rifles",
     rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/ak47_headshot.png"
@@ -16,7 +16,7 @@ const items = [
     name: "Head-Shot",
     gun: "AK-47",
     cost: "641",
-    category: "Rifle",
+    category: "Rifles",
     rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/ak47_headshot.png"
@@ -25,7 +25,7 @@ const items = [
     name: "Head-Shot",
     gun: "AK-47",
     cost: "641",
-    category: "Rifle",
+    category: "Rifles",
     rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/ak47_headshot.png"
@@ -34,7 +34,7 @@ const items = [
     name: "Head-Shot",
     gun: "AK-47",
     cost: "641",
-    category: "Rifle",
+    category: "Rifles",
     rarity: "Covert",
     quality: "Field-Tested",
     imgURL: "/assets/ak47_headshot.png"
