@@ -8,11 +8,13 @@ const app = express();
 
 const assetsPathPublic = path.join(__dirname, "public");
 const assetsPathAssets = path.join(__dirname, "assets");
-const assetsPathFonts = path.join(__dirname, "fonts")
+const assetsPathFonts = path.join(__dirname, "fonts");
+const assetsPathDOM = path.join(__dirname, "DOM");
 
 app.use("/public", express.static(assetsPathPublic));
 app.use("/assets", express.static(assetsPathAssets));
 app.use("/fonts", express.static(assetsPathFonts));
+app.use("/DOM", express.static(assetsPathDOM));
 
 app.use(express.urlencoded({ extended: true }));
 

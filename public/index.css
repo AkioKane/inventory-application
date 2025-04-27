@@ -401,6 +401,10 @@ body {
 }
 
 .buy-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   height: 100%;
   width: 100%;
   border: none;

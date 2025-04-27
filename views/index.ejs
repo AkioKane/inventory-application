@@ -135,7 +135,7 @@
           <% for (item of items)  { %>
             <div class="item <%=item.rarity.charAt(0).toLowerCase() + item.rarity.slice(1)%>">
               <div class="buy-item-container">
-                <button class="buy-item">Buy</button>
+                <a href="?delete=<%= item.id %>" class="buy-item">Buy</a>
               </div>
               <div class="img-container-item">
                 <img src="<%=item.imgurl %>" alt="image">

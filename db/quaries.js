@@ -52,24 +52,11 @@ async function searchItem({
   return result.rows;
 }
 
-async function deleteItem(
-  name,
-  gun,
-  cost,
-  category,
-  rarity,
-  quality,
-) {
+async function deleteItem(id) {
   await pool.query(`
       DELETE FROM items 
-      WHERE name LIKE $1
-        AND gun LIKE $2
-        AND cost LIKE $3
-        AND category LIKE $4
-        AND rarity LIKE $5
-        AND quality LIKE $6;
-    `,
-    [name, gun, cost, category, rarity, quality]
+      WHERE id=$1;
+    `, [id]
   );
 }
 

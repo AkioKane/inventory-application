@@ -9,7 +9,6 @@ async function getItems(req, res) {
 async function indexRouterGet(req, res, next) {
   try {
     const arr = await getItems();
-    console.log(req.query);
 
     if (Object.keys(req.query).length > 0) {
       let search;
@@ -23,7 +22,15 @@ async function indexRouterGet(req, res, next) {
         search = await db.searchItem(req.query.name);
       }
 
-      console.log("Search: ", search);
+      if(req.query.delete) {
+        if (req.query.delete <= 4) {
+          return res.redirect("/");
+        }
+        
+        await db.deleteItem(req.query.delete);
+        return res.redirect("/");
+      }
+
       await res.render("index", {title: "Home", items: search});
     } else {
       await res.render("index", {title: "Home", items: arr});
