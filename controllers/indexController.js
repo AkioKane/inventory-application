@@ -67,7 +67,7 @@ function searchCategory(gun) {
   const other = [
     "Music Kits",
     "Name Tags",
-    "Agents",
+    "Agent",
     "Graffiti",
     "Pass",
     "Pathes"
